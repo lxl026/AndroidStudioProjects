@@ -9,4 +9,5 @@
     <string name="status2">教职工</string>
     <string name="login">登录</string>
     <string name="SignUp">注册</string>
+    click_msg
 </resources>

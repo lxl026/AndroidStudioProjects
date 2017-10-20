@@ -110,13 +110,6 @@
             android:layout_height="wrap_content"
             android:text="@string/status1" />
 
-        <RadioButton
-            android:id="@+id/radioButton_staff"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="@string/status2"
-            app:layout_constraintLeft_toRightOf="@id/radioButton_student" />
     </RadioGroup>
 
     <Button
@@ -137,6 +130,7 @@
         app:layout_constraintRight_toLeftOf="@+id/Button_staff"
         android:layout_marginRight="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:onClick="click"
          />
 
     <Button
