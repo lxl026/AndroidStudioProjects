@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="company.leon.lab3.Detail">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="#8A000000"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--返回图标，与relativeLayout对齐-->
+        <ImageView
+            android:id="@+id/back"
+            android:src="@drawable/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+             />
+
+        <!--商品图片，水平居中，垂直铺满relativeLayout-->
+        <ImageView
+            android:id="@+id/goods_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/enchatedforest"
+             />
+
+        <!--商品名称，左对齐于返回图标，下对齐于relativeLayout-->
+        <TextView
+            android:id="@+id/goods_name"
+            android:text="商品名称"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_alignLeft="@id/back"/>
+
+        <!--收藏图标，下对齐于商品名称，右对齐于relativeLayout-->
+        <ImageView
+            android:id="@+id/star"
+            android:src="@drawable/empty_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_alignBottom="@+id/goods_name"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/goods_price"
+        android:text="价格"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="1"
+        android:textColor="#D5000000"
+        app:layout_constraintTop_toBottomOf="@+id/relative"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/goods_info"
+        android:text="其他信息"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="#8A000000"
+        app:layout_constraintTop_toBottomOf="@+id/goods_price"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+    <View
+        android:id="@+id/verticalLine"
+        android:layout_width="2dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#1E000000"
+        app:layout_constraintTop_toBottomOf="@+id/relative"
+        app:layout_constraintLeft_toRightOf="@+id/goods_price"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="10dp" />
+    <ImageView
+        android:id="@+id/cart"
+        android:src="@drawable/shoplist"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/relative"
+        app:layout_constraintLeft_toRightOf="@+id/verticalLine"
+        android:layout_marginRight="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintHorizontal_bias="0.562"
+        android:layout_marginLeft="10dp"
+        android:gravity="end"/>
+    <View
+        android:id="@+id/horizontalLine"
+        android:layout_width="368dp"
+        android:layout_height="2dp"
+        android:background="#1E000000"
+        app:layout_constraintTop_toBottomOf="@+id/goods_info"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+    <TextView
+        android:id="@+id/moreInfo"
+        android:text="更多产品信息"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLine"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp" />
+    <View
+        android:id="@+id/boldLine"
+        android:layout_width="368dp"
+        android:layout_height="20dp"
+        android:background="#1E000000"
+        app:layout_constraintTop_toBottomOf="@+id/moreInfo"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="368dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@+id/boldLine"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"></ListView>
+</android.support.constraint.ConstraintLayout>

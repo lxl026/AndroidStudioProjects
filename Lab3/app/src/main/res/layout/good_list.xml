@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/initial"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="A"
+        android:textSize="30sp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/circle"/>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="waitrose 早餐麦片"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/price"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        />
+</LinearLayout>
